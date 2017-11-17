@@ -47,12 +47,8 @@ def guardar_usuario(request):
             user.first_name =  request.POST.get('first_name')
             user.email = request.POST.get('email')
             perfil = Perfil()
-            perfil.numero_empleado = request.POST.get('numero_empleado')
             perfil.direccion = request.POST.get('direccion')
             perfil.telefono = request.POST.get('telefono')
-            puesto = request.POST.get('puesto')
-            puesto = Puesto.objects.get(pk=puesto)
-            perfil.puesto = puesto
             user.save()                        
             perfil.usuario = user
             perfil.save()
