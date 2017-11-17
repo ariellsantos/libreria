@@ -1,0 +1,18 @@
+{% extends "base/main.html" %}
+
+
+{% block container %}
+    <div class="row">
+        <div class="col col-sm-12 col-md-12 col-lg-12">
+            {% if request.user.is_staff %}                
+                <a href="" class="btn btn-primary">Crear prestamo</a>
+                <a href="" class="btn btn-primary">Ver prestamos</a>
+            {% endif %}
+            <a href="" class="btn btn-primary">Ver libros</a>
+            
+        </div>
+    </div>
+
+        
+{% endblock container %}
+    
